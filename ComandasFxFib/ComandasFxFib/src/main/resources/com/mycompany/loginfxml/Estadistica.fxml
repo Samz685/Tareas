@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.loginfxml.Estadistica">
+   <bottom>
+      <VBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <FlowPane alignment="CENTER" hgap="20.0">
+               <children>
+                  <Button fx:id="btnSalir" minWidth="-Infinity" mnemonicParsing="false" onAction="#Salir" prefHeight="50.0" prefWidth="100.0" text="Salir" />
+                  <Button fx:id="btnHoy" minWidth="-Infinity" mnemonicParsing="false" onAction="#irHoy" prefHeight="50.0" prefWidth="100.0" text="Pedidos hoy" />
+               </children>
+            </FlowPane>
+            <Label fx:id="detalle" textFill="#13da3b">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </bottom>
+   <top>
+      <VBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <MenuBar>
+              <menus>
+                <Menu mnemonicParsing="false" text="Archivo">
+                  <items>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#abrirCarta" text="Abrir Carta" />
+                    <MenuItem fx:id="menuSalir" mnemonicParsing="false" onAction="#Salir" text="Cerrar" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <Label contentDisplay="CENTER" text="TOP PRODUCTO ÚLTIMA SEMANA">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <BarChart fx:id="chartA" prefHeight="533.0" prefWidth="680.0" BorderPane.alignment="CENTER">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </center>
+</BorderPane>

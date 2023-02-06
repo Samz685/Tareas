@@ -1,0 +1,8 @@
+.etiqueta{
+    -fx-font-size:20px;
+}
+
+#tabla .table-cell{
+    -fx-font-size:16px;
+    -fx-font-weight:bold;
+}
